@@ -21,6 +21,9 @@ app.get("/", (req, res) => {
   res.status(200).send("Hello Coder ! 👩‍💻👨‍💻");
 });
 
+app.get("/home", (req, res) => {
+  res.status(200).send("request for the new file");
+});
 /**
  * Starting a server
  */
