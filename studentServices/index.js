@@ -91,6 +91,7 @@ app.post("/studentApp/api/v1/classes/:classId/students", (req, res) => {
    * I would like to read request body
    */
   const studentBody = req.body;
+  console.log(req.body);
   students[className][req.body.name] = studentBody;
   res.status(201).send(students[className]);
 });
