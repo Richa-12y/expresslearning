@@ -7,23 +7,21 @@ const app = express();
  * coustome create middleware
  */
 
-const warnningMessage = (req, res, next) => {
-  return res.status(200).send({
-    message:
-      "Request REST Endpoint is in working progress please try after 1 day",
+let count = 0;
+const countNounberofReq = (req, res, next) => {
+  count = count + 1;
+  res.status(200).send({
+    "No of request till now": `${count}`,
   });
-};
-
-const requestTimeLogger = (req, res, next) => {
-  console.log("Req come at: " + Date.now());
+  console.log(count);
   next();
 };
+
 /**
  * I want express to used Middleware
  */
 
-app.use(requestTimeLogger); //plugging middled ware
-app.use(warnningMessage); //this is called chaining middleware
+app.use(countNounberofReq); //plugging middled ware
 
 app.listen(8080, () => {
   console.log("Server has started port no 8080");
