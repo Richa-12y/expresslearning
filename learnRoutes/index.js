@@ -38,6 +38,9 @@ app.get("/movies", (req, res) => {
   });
 });
 
+const studentRoute = require("./student.route");
+app.use("./rootUri", studentRoute);
+
 app.listen("1111", () => {
   console.log("Server has started in 1111");
 });
