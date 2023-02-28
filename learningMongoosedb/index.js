@@ -34,12 +34,12 @@ async function dbOperations() {
       email: "reone15@gmail.com",
       subjects: ["Web development"],
     });
-    // const student1 = await Student.create({
-    //   name: "Ashu",
-    //   age: 23,
-    //   email: "ashu13@gmail.com",
-    //   subjects: ["Networking"],
-    // });
+    const student1 = await Student.create({
+      name: "Ashu",
+      age: 23,
+      email: "ashu13@gmail.com",
+      subjects: ["Networking"],
+    });
 
     // const student2 = await Student.create({
     //   name: "Shanu",
